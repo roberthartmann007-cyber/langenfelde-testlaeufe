@@ -52,7 +52,7 @@ Dann <http://localhost:8765/> öffnen.
 ### GitHub
 
 ```bash
-git remote add origin git@github.com:<konto>/langenfelde-vergleich.git
+git remote add origin https://github.com/roberthartmann007-cyber/langenfelde-testlaeufe.git
 git push -u origin main
 ```
 
@@ -69,7 +69,7 @@ Die drei Karten sind 2,6 bis 5,6 MB groß und liegen unter den Grenzen von GitHu
 **Direkt von diesem Rechner:**
 
 ```bash
-npx wrangler pages deploy site --project-name langenfelde-vergleich
+npx wrangler pages deploy site --project-name langenfelde-testlaeufe
 ```
 
 Die Seite enthält `noindex`. Wenn sie nicht öffentlich sein soll, im Dashboard unter

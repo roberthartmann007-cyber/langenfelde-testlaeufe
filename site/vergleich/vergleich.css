@@ -1,0 +1,32 @@
+/* Reiter Lauf 1 | Lauf 2 | Lauf 3: oben rechts, sitzen auf der Oberkante des Kartenbilds (Maße der Folie: --tt, --tr auf #work) */
+.vgl-reiter {
+  --vgl-blau: #6470FF;
+  --vgl-hell: #E3E5FF;
+  position: absolute; z-index: 7;
+  top: calc(var(--tt, 80px) - 32px); right: var(--tr, 20px);
+  display: flex; align-items: flex-end; gap: 4px;
+  pointer-events: auto; font-family: var(--font, inherit);
+  transition: top .7s var(--ease-layout, ease), right .7s var(--ease-layout, ease);
+}
+.vgl-reiter[hidden] { display: none; }
+.vgl-reiter button {
+  height: 32px; padding: 0 16px; border: 0; margin: 0;
+  border-radius: 16px 16px 0 0;   /* oben rund, unten flach auf dem Kartenbild */
+  background: var(--vgl-hell); color: var(--vgl-blau);
+  font: inherit; font-size: 13px; font-weight: 700; letter-spacing: .01em; cursor: pointer;
+}
+.vgl-reiter button:hover { background: #CDD1FF; }
+.vgl-reiter button.an { background: var(--vgl-blau); color: #fff; cursor: default; }
+.vgl-reiter button:focus-visible { outline: 2px solid var(--vgl-blau); outline-offset: 2px; }
+/* Folien ohne Kartenbild (Schluss, Leitfragen): Reiter frei oben rechts, ringsum rund */
+.vgl-reiter.frei { top: 16px; right: 16px; }
+.vgl-reiter.frei button { border-radius: 16px; }
+.vgl-hinweis {
+  position: absolute; top: calc(100% + 8px); right: 0; white-space: nowrap;
+  padding: 5px 10px; border-radius: 4px; background: rgba(255, 255, 255, .94); color: #1d2433;
+  font-size: 12px; box-shadow: 0 1px 4px rgba(0, 0, 0, .18);
+}
+.vgl-hinweis[hidden] { display: none; }
+
+/* Platz für die Reiter rechts neben dem Folientitel */
+body.vgl-an #tour .t-kopf { padding-right: 290px; }

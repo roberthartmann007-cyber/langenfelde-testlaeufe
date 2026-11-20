@@ -1,4 +1,9 @@
-# Cloudflare Pages: statische Seite aus site/, ohne Build-Schritt
+# Cloudflare Worker mit statischen Dateien aus site/, ohne Build-Schritt und ohne Worker-Skript.
+# Deploy-Befehl in Cloudflare: npx wrangler deploy
+# name muss dem Namen des Workers im Cloudflare-Dashboard entsprechen.
 name = "langenfelde-testlaeufe"
 compatibility_date = "2026-11-01"
-pages_build_output_dir = "site"
+
+[assets]
+directory = "./site"
+not_found_handling = "404-page"

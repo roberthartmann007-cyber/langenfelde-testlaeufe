@@ -60,16 +60,13 @@ Die drei Karten sind 2,6 bis 5,6 MB groß und liegen unter den Grenzen von GitHu
 
 ### Cloudflare Pages
 
-**Über GitHub (empfohlen):** Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git → Repository wählen.
+**Über GitHub (empfohlen):** Cloudflare Dashboard → Workers & Pages → Create → Import a repository → Repository wählen. Deploy command: `npx wrangler deploy` (Vorgabe). `wrangler.toml` liefert `site/` als statische Dateien aus.
 
-- Framework preset: None
-- Build command: leer lassen
-- Build output directory: `site`
 
 **Direkt von diesem Rechner:**
 
 ```bash
-npx wrangler pages deploy site --project-name langenfelde-testlaeufe
+npx wrangler deploy
 ```
 
 Die Seite enthält `noindex`. Wenn sie nicht öffentlich sein soll, im Dashboard unter
